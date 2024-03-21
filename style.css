@@ -59,13 +59,16 @@ main {
 
 main > img {
     height: 30dvh; 
-    width: 50vw; 
+    width: auto; 
     margin: 2em; 
     /* sets the margin 2 times the current font size*/
     background-color: var(--waikawa-gray-950); 
     color:#414e6e; 
     /* purpose of adding color is to show where the image will be before
     adding image*/ 
+    object-fit: cover;
+    /* used to stop image from distorting - when page is stretched 
+    the image will stay focused*/
 }
 
 main > * {
