@@ -37,11 +37,24 @@ header {
     width: 100vw; 
     /*100vw covers the fills out the wifht of the page*/
     text-align: center; 
-    font-size: x-small; 
     display: flex; 
     flex-direction: column;
     justify-content: center; 
     /* push them to the center of the container*/
+}
+
+nav > a {
+    text-decoration: none;
+    /* gets rid of the underline oon links*/
+    background-color: var(--waikawa-gray-800); 
+    color: white; 
+    padding: 0.25em; 
+    border-radius: 0.5em; 
+}
+
+nav > a:hover {
+    background-color: var(--waikawa-gray-300); 
+    /* changes colout of button when cursor hovers over them*/
 }
 
 main {
@@ -84,4 +97,7 @@ footer {
     height: 5dvh; 
     width: 100vw; 
     text-align: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
