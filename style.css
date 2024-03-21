@@ -17,33 +17,68 @@
 /* :root is not an element on the page - a syntax to say in the document but not tied
 to an element */
 
+* {
+    margin: 0; 
+}
+/* no gap around flex-xontianers*/
 body {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--waikawa-gray-400);
-    justify-content: center;
+    display: flex; 
+    flex-direction: column; 
+    background-color: var(--waikawa-gray-500);
+    justify-content: center; 
     align-items: center; 
 }
 
 header {
-    background-color: var(--waikawa-gray-500);
+    background-color: var(--waikawa-gray-600); 
     height: 10dvh; 
-    width: 100%;
+    /*10% of the viewports height. e.g., if the viewport height is 1000pc then setting
+    an element height of 10dvh = 100px (10% of 1000px)*/
+    width: 100vw; 
+    /*100vw covers the fills out the wifht of the page*/
     text-align: center; 
     font-size: x-small; 
-    display: flex;
-    justify-content: column; 
-}
-
-footer {
-    background-color: var(--waikawa-gray-500);
-    height: 5dvh;
-    width: 100dvh;
-    text-align: center; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    /* push them to the center of the container*/
 }
 
 main {
     min-height: 85dvh; 
-    width: 100dvh; 
+    /* 10 + 5 = 15 , 100 - 15 = 85dvh - always want it to add up to 100dvh
+    to fill out the screen
+    min-height (we are basically saying at a minium, at the shortest height 
+    we want it to fill out the screen*/
+    width: 100vw; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
 
+main > img {
+    height: 30dvh; 
+    width: 50vw; 
+    margin: 2em; 
+    /* sets the margin 2 times the current font size*/
+    background-color: var(--waikawa-gray-950); 
+    color:#414e6e; 
+    /* purpose of adding color is to show where the image will be before
+    adding image*/ 
+}
+
+main > * {
+    margin: 0.5em; 
+}
+
+main > p {
+    text-align: center; 
+}
+
+footer {
+    background-color: var(--waikawa-gray-600); 
+    height: 5dvh; 
+    width: 100vw; 
+    text-align: center; 
 }
